@@ -11,6 +11,9 @@
 </head>
 
 <body id="cl-body" class="page page-home">
+    <div class="preloader">
+        <img src="img/preloader.svg" alt="">
+    </div>
     <canvas id="canvas"></canvas>
     <header class="d-f jc-sb">
         <div class="logo">
@@ -38,18 +41,13 @@
         </div>
     </header>
     <div id="home" class="content">
+        <h2 class="what">Marketing agency</h2>
         <div class="title_content">
-            <span>creative</span>
-            <span class="m-l">marketing</span>
+            <span>for space</span>
             <div class="mobile d-f ai-fs">
-                <span>agency</span>
+                <span class="m-l">creators</span>
                 <div class="text_content d-f fd-c">
-                    <p>
-                        Métier helps developers to differentiate and promote their
-                        projects by reinforcing residential and commercial concepts. Also,
-                        we help architects and designers to become recognizable to attract
-                        new customers.
-                    </p>
+                    <p>Métier helps developers to differentiate and promote their projects by reinforcing residential and commercial concepts. Also, we help architects and designers to become recognizable to attract new customers.</p>
                     <a class="READ_more" href="#">READ more</a>
                 </div>
             </div>
@@ -57,28 +55,30 @@
         <a class="scrol d-f fd-c ai-c jc-c"><img src="img/scrol.png" alt="" />SCROL DOWN</a>
     </div>
     <div id="project" class="sec1 content">
-        <h1 class="name_projeck">NAME<br />OF PROJECT</h1>
+        <h1 class="name_projeck">ENSO<br />POMO</h1>
         <div class="w85 d-f ai-fe jc-c">
             <div class="photo_sec1">
-                <img src="img/photo-1.png" alt="" />
+                <picture>
+                    <source srcset="video/Mob_Case.mp4" media="(max-width: 560px)">
+                    <!-- <source srcset="smaller_portrait.jpg" media="(max-width: 40em) and (orientation: portrait)"> -->
+                    <video src="video/Case.mp4" controls></video>
+                </picture>
             </div>
             <div class="texts_sec1">
                 <div class="text_sec1">
-                    <h2>Клиент</h2>
-                    <p style="text-transform: capitalize;">RIver town</p>
+                    <h2>Client</h2>
+                    <p style="text-transform: capitalize;">ENSO</p>
                 </div>
                 <div class="text_sec1">
-                    <h2>ЗАДАЧА</h2>
-                    <p>Поднять продажи, привлечь европейськую аудиторию.</p>
+                    <h2>Request</h2>
+                    <p>Create a promotional video for POETICA residential complex project</p>
                 </div>
                 <div class="text_sec1">
-                    <h2>РАЗРАБОТАНО</h2>
+                    <h2>Services</h2>
                     <ul class="d-f">
-                        <li>Стратегия</li>
-                        <li>Сайт</li>
-                        <li>Айдентика</li>
-                        <li>Промо продакшн</li>
-                        <li>СЕО</li>
+                        <li>Idea</li>
+                        <li>Production</li>
+                        <li>Post production</li>
                     </ul>
                 </div>
             </div>
@@ -93,21 +93,21 @@
             </div>
             <div class="texts_sec1">
                 <div class="text_sec1">
-                    <h2>Клиент</h2>
-                    <p style="text-transform: capitalize;">RIver town</p>
+                    <h2>Client</h2>
+                    <p style="text-transform: capitalize;">AIMM GROUP</p>
                 </div>
                 <div class="text_sec1">
-                    <h2>ЗАДАЧА</h2>
-                    <p>Поднять продажи, привлечь европейськую аудиторию.</p>
+                    <h2>Request</h2>
+                    <p>Creating a YouTube channel content that will be useful for real estate developers top managers</p>
                 </div>
                 <div class="text_sec1">
-                    <h2>РАЗРАБОТАНО</h2>
+                    <h2>Services</h2>
                     <ul class="d-f">
-                        <li>Стратегия</li>
-                        <li>Сайт</li>
-                        <li>Айдентика</li>
-                        <li>Промо продакшн</li>
-                        <li>СЕО</li>
+                        <li>Idea </li>
+                        <li>Strategy</li>
+                        <li>Channel design</li>
+                        <li>Animation</li>
+                        <li>The project is in progress</li>
                     </ul>
                 </div>
             </div>
@@ -124,18 +124,25 @@
         <div class="info d-f fw-w ai-c jc-sb">
             <div class="info_adress d-f fd-c">
                 <div class="address">
-                    <h2>Kiev UKRAINE</h2>
-                    <p>address, phone, mail</p>
+                    <h2>KYIV, UKRAINE</h2>
+                    <p>30/39 Shchekavytska str</p>
                 </div>
                 <div class="address">
-                    <h2>TORONTO CANADA</h2>
-                    <p>address, phone, mail</p>
+                    <h2>OTTAWA, CANADA</h2>
+                    <p>100 Gloucester str</p>
                 </div>
             </div>
-            <div class="email">
-                <img src="img/mail_hover.png" alt="" />
-                <a href="mailto:info@metier.com">info@metier.com</a>
+            <div class="">
+                <div class="email">
+                    <img src="img/mail_hover.png" alt="" />
+                    <a href="mailto:info@metier.com">info@metier.com</a>
+                </div>
+            <div class="tel email">
+                   <img src="img/mail_hover.png" alt="" />
+                   <a href="tel:+380677564900">+38 067 756 49 00</a>
+                </div>
             </div>
+            
         </div>
         <canvas id="canvas2"></canvas>
     </div>
