@@ -5,8 +5,11 @@ function loadData() {
 }
 loadData().then(() => {
     let preloaderEl = document.querySelector('.preloader');
+    let preloaderEl_Img = document.querySelector('.preloader img');
     preloaderEl.classList.add('hidden');
-    preloaderEl.classList.remove('visible');
+    preloaderEl_Img.classList.add('hidden');
+    preloaderEl.classList.add('hidden');
+    preloaderEl_Img.classList.remove('visible');
   });
 let fullBody = document.getElementById('cl-body');
 let menuBtn = document.querySelector(".menu-btn");
