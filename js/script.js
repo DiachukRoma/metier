@@ -1,3 +1,13 @@
+function loadData() {
+  return new Promise((resolve, reject) => {
+    setTimeout(resolve, 2000);
+  })
+}
+loadData().then(() => {
+    let preloaderEl = document.querySelector('.preloader');
+    preloaderEl.classList.add('hidden');
+    preloaderEl.classList.remove('visible');
+  });
 let fullBody = document.getElementById('cl-body');
 let menuBtn = document.querySelector(".menu-btn");
 let menu = document.querySelector(".menu");
