@@ -17,6 +17,17 @@ for (let anchor of anchors) {
     });
   });
 }
+if (document.documentElement.scrollWidth < 565) {
+    let video1 = document.querySelectorAll("#oneVideo");
+    let video2 = document.querySelectorAll("#twoVideo");
+    for (let elem of video1) {
+        elem.style.display = 'none';
+    }
+    for (let elem of video2) {
+        elem.style.display = 'block';
+    }
+
+}
 let m = document.getElementById("canvas2");
 let xtc = m.getContext("2d");
 
