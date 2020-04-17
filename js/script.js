@@ -1,16 +1,12 @@
-function loadData() {
-  return new Promise((resolve, reject) => {
-    setTimeout(resolve, 2000);
-  })
-}
 loadData().then(() => {
     let preloaderEl = document.querySelector('.preloader');
     let preloaderEl_Img = document.querySelector('.preloader img');
     preloaderEl.classList.add('hidden');
     preloaderEl_Img.classList.add('hidden');
     preloaderEl.classList.add('hidden');
-    preloaderEl_Img.classList.remove('visible');
-  });
+    preloaderEl_Img.classList.remove('visible');        
+});
+
 let fullBody = document.getElementById('cl-body');
 let menuBtn = document.querySelector(".menu-btn");
 let menu = document.querySelector(".menu");
@@ -42,6 +38,17 @@ menuBtn.addEventListener('click', e => {
     document.addEventListener('click', clickOutside);
 });
 
+function loadData() {
+    return new Promise((resolve, reject) => {
+        if (getCookie('preloader') === false) {
+            setCookie('preloader', true, { 'max-age': 7200 });
+            setTimeout(resolve, 2000);
+        }else{
+            resolve();
+        }
+    })
+}
+
 function clickOutside(event) {
     if (!menu.contains(event.target) && menuBtn != event.target && !!menu && !!(menu.offsetWidth || menu.offsetHeight || menu.getClientRects().length)) {
         menuBtn.classList.remove("menuBtn_active");
@@ -49,6 +56,32 @@ function clickOutside(event) {
         mL.classList.remove("mL_active");
         document.removeEventListener('click', clickOutside);
     }
+}
+
+function getCookie(name) {
+    let matches = document.cookie.match(new RegExp(
+        "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+    ));
+    return matches ? decodeURIComponent(matches[1]) : undefined;
+}
+
+function setCookie(name, value, options = {}) {
+    options = {
+        path: '/',
+        ...options
+    };
+    if (options.expires instanceof Date) {
+        options.expires = options.expires.toUTCString();
+    }
+    let updatedCookie = encodeURIComponent(name) + "=" + encodeURIComponent(value);
+    for (let optionKey in options) {
+        updatedCookie += "; " + optionKey;
+        let optionValue = options[optionKey];
+        if (optionValue !== true) {
+            updatedCookie += "=" + optionValue;
+        }
+    }
+    document.cookie = updatedCookie;
 }
 
 if (fullBody.className == 'page page-home') {
@@ -62,8 +95,8 @@ if (fullBody.className == 'page page-home') {
         cy = ch / 2;
     let frames = 0;
     let rad = Math.PI / 180;
-    let R = 100;
-    ctx.strokeStyle = "#99d70a";
+    let R = 110;
+    ctx.strokeStyle = "#fcff0a";
 
     let points = [];
 
@@ -75,14 +108,14 @@ if (fullBody.className == 'page page-home') {
         this.y = cy + this.r * Math.sin(a * rad);
     }
 
-    for (let a = 0; a < 360; a += 10) {
+    for (let a = 0; a < 500; a += 10) {
         let p = new Point(a);
         points.push(p);
     }
 
     function conectar(o) {
         ctx.fillStyle = Grd(cx, cy, 1.5 * R);
-        let ultimo = o.length - 1; // último punto del objeto o
+        let ultimo = o.length - 1; 
         let pu0 = puntoDeUnion(o, ultimo, 0);
         ctx.beginPath();
         ctx.moveTo(pu0.x, pu0.y);
@@ -116,18 +149,19 @@ if (fullBody.className == 'page page-home') {
         }
         conectar(points);
     }
-    elId = window.requestAnimationFrame(Animacion);
+    for (let index = 0; index < 2; index++) {
+        elId = window.requestAnimationFrame(Animacion);
+    }
 
     function Grd(x, y, r) {
         grd = ctx.createRadialGradient(x, y, 0, x, y, r);
-        grd.addColorStop(0, "#F9D93A");
-        grd.addColorStop(0.3, "#ffdd00");
-        grd.addColorStop(1, "#d9bc00");
+        grd.addColorStop(0, "#fedc35");
+        grd.addColorStop(0.8, "#ffff00");
+        grd.addColorStop(1, "#ffea61");
         return grd;
     }
 
     function rnd() {
-        // a @tmrDevelops function
         Math.seed = (Math.seed * 108013 + 2531011) & 0xffffffff;
         return Math.abs(Math.seed >> 16) / 3286;
     }

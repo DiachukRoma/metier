@@ -38,7 +38,7 @@ let hc = (m.height = 300),
 let frames2 = 0;
 let dar = Math.PI / 180;
 let R2 = 100;
-xtc.strokeStyle = "#99d70a";
+xtc.strokeStyle = "#fcff0a";
 
 let points2 = [];
 
@@ -91,13 +91,15 @@ function Animacion2() {
     }
     conectar2(points2);
 }
-elId = window.requestAnimationFrame(Animacion2);
+for (let index = 0; index < 2; index++) {
+    elId = window.requestAnimationFrame(Animacion2);
+}
 
 function Grd2(x, y, r) {
     grd = xtc.createRadialGradient(x, y, 0, x, y, r);
-    grd.addColorStop(0, "#F9D93A");
-    grd.addColorStop(0.3, "#ffdd00");
-    grd.addColorStop(1, "#d9bc00");
+    grd.addColorStop(0, "#fedc35");
+    grd.addColorStop(0.8, "#ffff00");
+    grd.addColorStop(1, "#ffea61");
     return grd;
 }
 
