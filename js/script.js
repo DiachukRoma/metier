@@ -1,12 +1,12 @@
-// loadData().then(() => {
-//     let preloaderEl = document.querySelector('.preloader');
-//     let preloaderEl_Img = document.querySelector('.preloader img');
+loadData().then(() => {
+    let preloaderEl = document.querySelector('.preloader');
+    let preloaderEl_Img = document.querySelector('.preloader img');
 
-//     preloaderEl.classList.add('hidden');
-//     preloaderEl_Img.classList.add('hidden');
-//     preloaderEl.classList.add('hidden');
-//     preloaderEl_Img.classList.remove('visible');
-// });
+    preloaderEl.classList.add('hidden');
+    preloaderEl_Img.classList.add('hidden');
+    preloaderEl.classList.add('hidden');
+    preloaderEl_Img.classList.remove('visible');
+});
 
 let fullBody = document.getElementById('cl-body');
 let menuBtn = document.querySelector(".menu-btn");
@@ -37,8 +37,6 @@ menuBtn.addEventListener('click', e => {
     }
     document.addEventListener('click', clickOutside);
 });
-
-new WOW().init();
 
 function loadData() {
     return new Promise((resolve, reject) => {
