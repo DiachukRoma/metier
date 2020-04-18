@@ -59,13 +59,15 @@ video {
 
 .preloader {
     position: fixed;
-    top: 0;left: 0;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100vh;
     background-color: #282828;
     z-index: 999;
     overflow: visible;
 }
+
 .preloader img {
     display: block;
     margin: auto;
@@ -261,7 +263,6 @@ header {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-
 }
 
 .nav a:hover:nth-child(1):after {
@@ -360,7 +361,9 @@ header {
     opacity: 1;
 }
 
+
 /* sec1 */
+
 .name_projeck {
     position: absolute;
     top: 20%;
@@ -406,7 +409,9 @@ header {
     margin-bottom: 10px;
 }
 
+
 /* sec3 */
+
 .sec3 {
     max-width: none;
     width: 100%;
@@ -444,23 +449,23 @@ header {
 }
 
 .email {
-    margin-right: 10%;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 80px;
 }
 
 .email a {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -45%);
     font-size: 28px;
-    line-height: 48px;
     white-space: nowrap;
+    display: block;
 }
 
 .email img {
     opacity: 0;
     transition: 0.5s;
+    position: absolute;
 }
 
 .email:hover img {
@@ -473,6 +478,12 @@ header {
     bottom: -20%;
     top: auto;
 }
+
+.contacts__call {
+    margin-bottom: -100px;
+    margin-right: 12vw;
+}
+
 
 /* content_about */
 
@@ -540,7 +551,8 @@ rect {
     margin-bottom: 40px;
 }
 
-.title_about p, .title_about li {
+.title_about p,
+.title_about li {
     line-height: 32px;
 }
 
@@ -558,7 +570,8 @@ rect {
     margin-bottom: 40px;
 }
 
-.treatments li, .work li {
+.treatments li,
+.work li {
     font-size: 18px;
     line-height: 32px;
     list-style: inside;
@@ -623,7 +636,10 @@ rect {
     width: 27%;
     opacity: 0;
     transition: 0.4s;
+}
 
+.d-block {
+    display: block;
 }
 
 @media screen and (max-width: 1700px) {
@@ -643,35 +659,28 @@ rect {
         height: 120px;
         line-height: 120px;
     }
-
     .social a {
         font-size: 20px;
     }
-
     .title_content {
         font-size: 150px;
         line-height: 170px;
     }
-
     .m-l {
         margin-left: 10%;
     }
-
     .text_about {
         font-size: 70px;
         line-height: 100px;
     }
-
     .sec3 {
         padding: 6% calc(50% - 610px);
         padding-bottom: 0;
     }
-
     .title_sec3 {
         font-size: 115px;
         line-height: 110px;
     }
-
     .email_about img {
         width: 30%;
     }
@@ -681,51 +690,41 @@ rect {
     .content {
         padding-top: 6%
     }
-
     .sec3 {
         padding: 6% calc(50% - 575px);
         padding-bottom: 0;
     }
-
     .what {
         margin-left: 0.8%;
     }
-
     .title_content {
         font-size: 140px;
         line-height: 140px;
         margin-left: 0;
     }
-
     .text_about {
         font-size: 59px;
         line-height: 80px;
     }
-
     .name_projeck {
         font-size: 85px;
         line-height: 75px;
         top: 18%;
     }
-
     .photo_sec1 {
         width: 40%;
         flex: 0 1 auto;
     }
-
     .title_sec3 {
         font-size: 100px;
         line-height: 95px;
     }
-
     .work_title {
         flex: 1 0 38%;
     }
-
     .works {
         flex: 1 0 62%;
     }
-
     .work {
         -webkit-flex-direction: column;
         -moz-flex-direction: column;
@@ -733,16 +732,13 @@ rect {
         -o-flex-direction: column;
         flex-direction: column;
     }
-
     .work div {
         width: 100%;
         margin: 0 35px 90px 35px;
     }
-
     .work div h2 {
         margin-bottom: 20px;
     }
-
     .work div p {
         font-size: 20px;
         line-height: 40px;
@@ -754,18 +750,15 @@ rect {
         font-size: 50px;
         line-height: 80px;
     }
-
     .name_projeck {
         font-size: 70px;
         line-height: 75px;
         top: 18%;
     }
-
     .sec3 {
         padding: 6% calc(50% - 490px);
         padding-bottom: 0;
     }
-
     .title_sec3 {
         font-size: 90px;
         line-height: 85px;
@@ -777,64 +770,51 @@ rect {
         height: 90px;
         line-height: 90px;
     }
-
     .title_content {
         font-size: 100px;
         line-height: 100px;
     }
-
     .text_content {
         font-size: 14px;
         line-height: 20px;
         margin-left: 4%;
     }
-
     .text_content p {
         font-size: 16px;
         line-height: 22px;
     }
-
     .READ_more {
         margin-top: 15px;
     }
-
     .name_projeck {
         font-size: 60px;
         line-height: 55px;
     }
-
     .texts_sec1 {
         margin-left: 35px;
         max-width: 450px;
     }
-
     .text_sec1 {
         margin-bottom: 25px;
     }
-
     .text_sec1 h2 {
         margin-bottom: 5px;
     }
-
     .text_about {
         font-size: 45px;
         line-height: 70px;
     }
-
     .sec3 {
         padding: 6% calc(50% - 380px);
         padding-bottom: 0;
         min-height: 90vh;
     }
-
     .email {
         margin-right: 0;
     }
-
     .title_sec3 {
         font-size: 80px;
     }
-
     .email_about img {
         width: 50%;
     }
@@ -847,16 +827,13 @@ rect {
         right: -70%;
         z-index: 1;
     }
-
     .menu_active {
         right: 0;
     }
-
     .title_content {
         font-size: 85px;
         line-height: 88px;
     }
-
     .mobile {
         -webkit-flex-wrap: wrap;
         -moz-flex-wrap: wrap;
@@ -864,42 +841,34 @@ rect {
         -o-flex-wrap: wrap;
         flex-wrap: wrap;
     }
-
     .text_content p {
         max-width: 500px;
         margin-right: auto;
         font-size: 14px;
         line-height: 19px;
     }
-
     .w85 {
         flex-wrap: wrap;
     }
-
     .photo_sec1 {
         width: 80%;
     }
-
     .name_projeck {
         top: 10%;
     }
-
     .texts_sec1 {
         margin-left: 0;
         margin-top: 25px;
     }
-
     .sec3 {
         padding: 6% calc(50% - 290px);
         padding-bottom: 0;
         min-height: 85vh;
     }
-
     .title_sec3 {
         font-size: 75px;
         line-height: 75px;
     }
-
     .faces {
         -webkit-flex-direction: column;
         -moz-flex-direction: column;
@@ -909,25 +878,20 @@ rect {
         -ms-align-items: center;
         align-items: center;
     }
-
     .face:hover p {
         opacity: 0;
     }
-
     .face:hover rect {
         mix-blend-mode: luminosity;
         transition: 0s;
     }
-
     .face.active .face-name {
         opacity: 1 !important;
     }
-
     .face.active rect {
         mix-blend-mode: normal;
         transition: 1s;
     }
-
     .work_text {
         -webkit-flex-direction: column;
         -moz-flex-direction: column;
@@ -937,19 +901,17 @@ rect {
         -ms-align-items: center;
         align-items: center;
     }
-
     .work_title {
         text-align: center;
         margin-bottom: 50px;
     }
-
     .face {
         margin-top: 40px;
     }
     .face-name {
-	    font-size: 60px;
-	    line-height: 60px;
-	}
+        font-size: 60px;
+        line-height: 60px;
+    }
 }
 
 @media screen and (max-width: 570px) {
@@ -961,59 +923,48 @@ rect {
         -ms-user-select: none;
         user-select: none;
     }
-
     #home {
         min-height: 85vh;
     }
-
     .logo {
         margin: 0;
     }
-
     .menu-btn {
         position: fixed;
         top: 0;
         left: 50%;
         transform: translate(-50%, 0%);
     }
-
     .menu {
         position: fixed;
         width: 70%;
         right: -70%;
         z-index: 1;
     }
-
     .menu_active {
         right: 0;
     }
-
     .languages {
         margin-top: 50px;
     }
-
     .languages a {
         font-size: 16px;
         line-height: 18px;
         margin-right: 45px;
     }
-
     .languages a:last-child {
         margin-right: 0;
     }
-
     .nav a {
         font-size: 20px;
         line-height: 65px;
         height: 65px;
         padding: 0 calc(50% - 25px);
     }
-
     canvas {
         margin: calc(40vh - 125px) auto;
         width: 80vw;
     }
-
     .w85 {
         width: 90%;
         -webkit-flex-direction: column;
@@ -1022,115 +973,93 @@ rect {
         -o-flex-direction: column;
         flex-direction: column;
     }
-
     header {
         position: static;
         flex-direction: column-reverse;
         align-items: center;
         height: 13vh;
     }
-
     .social {
         width: 90%;
     }
-
     .social a {
         font-size: 18px;
     }
-
     .content {
         width: 100%;
         min-height: 87vh;
     }
-
     .title_content {
         font-size: 61px;
         line-height: 68px;
         margin-left: 10px;
         margin-right: 10px;
     }
-
     .scrol {
         bottom: 2%;
     }
-
     .m-l {
         margin-left: 0;
     }
-
     .what {
         font-size: 18px;
         margin-left: 15px;
     }
-
     .text_content {
         margin-left: 0;
         margin-top: 25px;
     }
-
     .sec1,
     .sec3 {
         min-height: 100vh;
         padding-top: 25%;
     }
-
     .name_projeck {
         top: 4%;
         left: 10%;
         font-size: 48px;
         line-height: 48px;
     }
-
     .photo_sec1 {
         width: 100%;
         height: 30vh;
         overflow: hidden;
     }
-
     .texts_sec1 {
         margin-left: 0;
     }
-
     .text_sec1 {
         margin: 20px 0;
     }
-
     .texts_sec1 h2 {
         display: none;
     }
-
     .sec3 {
         padding: 20% 15px;
         padding-bottom: 0;
     }
-
     #canvas2 {
         bottom: 0;
     }
-
     .title_sec3 {
         font-size: 40px;
         line-height: 45px;
     }
-
     .info {
         flex-direction: column-reverse;
         align-items: flex-start;
         margin-top: 0;
     }
-
     .email {
         /*width: 100%;*/
         margin: 0;
         margin-top: 35px;
         margin-bottom: 45px;
     }
-
     .email a {
         position: static;
         font-size: 18px;
     }
-
     .email img {
         width: 140%;
         position: absolute;
@@ -1138,64 +1067,55 @@ rect {
         left: -50%;
         transform: translate(20%, 45%);
     }
-
     .address {
         margin-bottom: 25px;
     }
-
     /* about */
     .content_about {
         width: 90%;
         padding-top: 14vh;
     }
-
     .text_about {
         font-size: 40px;
         line-height: 38px;
     }
-
     .text_about span:nth-child(2n) {
         margin-left: 0;
     }
-
     .title_about {
         margin: 0;
     }
-
     .treatment:first-child {
         margin-right: 0;
     }
-
     svg {
         width: 100%;
     }
-
     .work_title h1 {
         font-size: 82px;
         line-height: 75px;
     }
-
     .work div {
         margin: 0 0 35px 0;
         padding: 0;
     }
-
     .work div h2 {
         margin-bottom: 10px;
     }
-
     .work div p {
         font-size: 18px;
         line-height: 35px;
         padding-left: 10px;
     }
-
     .email_about {
         margin-bottom: 50px;
     }
-
     .email_about img {
         width: 100%;
+    }
+    .contacts__call {
+        margin-bottom: 0;
+        margin-right: 0;
     }
 }
 
@@ -1203,43 +1123,35 @@ rect {
     header {
         height: 15vh;
     }
-
     .content {
         min-height: 78vh;
     }
-
     .nav a {
         font-size: 18px;
         line-height: 50px;
         height: 50px;
         padding: 0 calc(50% - 30px);
     }
-
     .social a {
         font-size: 15px;
         line-height: 26px;
     }
-
     .title_content {
         font-size: 50px;
         line-height: 50px;
     }
-
     .text_content p {
         font-size: 14px;
         line-height: 18px;
     }
-
     .name_projeck {
         top: 6%;
         font-size: 35px;
         line-height: 35px;
     }
-
     .texts_sec1 {
         margin-top: 10px;
     }
-
     .title_sec3 {
         font-size: 39px;
         line-height: 45px;
@@ -1251,20 +1163,16 @@ rect {
         font-size: 57px;
         line-height: 65px;
     }
-
     .text_content {
         margin-top: 30px;
     }
-
     .text_content p {
         line-height: 20px;
     }
-
     .READ_more {
         font-size: 16px;
         margin-top: 25px;
     }
-
     .sec1,
     .sec3 {
         min-height: 80vh;

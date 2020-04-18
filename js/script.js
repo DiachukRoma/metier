@@ -1,11 +1,12 @@
-loadData().then(() => {
-    let preloaderEl = document.querySelector('.preloader');
-    let preloaderEl_Img = document.querySelector('.preloader img');
-    preloaderEl.classList.add('hidden');
-    preloaderEl_Img.classList.add('hidden');
-    preloaderEl.classList.add('hidden');
-    preloaderEl_Img.classList.remove('visible');        
-});
+// loadData().then(() => {
+//     let preloaderEl = document.querySelector('.preloader');
+//     let preloaderEl_Img = document.querySelector('.preloader img');
+
+//     preloaderEl.classList.add('hidden');
+//     preloaderEl_Img.classList.add('hidden');
+//     preloaderEl.classList.add('hidden');
+//     preloaderEl_Img.classList.remove('visible');
+// });
 
 let fullBody = document.getElementById('cl-body');
 let menuBtn = document.querySelector(".menu-btn");
@@ -15,16 +16,15 @@ let mL = document.querySelector(".title_content span.m-l");
 
 if (document.body.offsetWidth < 768) {
     window.addEventListener('scroll', function() {
-        let windowScroll =  window.scrollY;
+        let windowScroll = window.scrollY;
         [...document.querySelectorAll(".face")].map((el, i) => {
-                let face = el.getBoundingClientRect();
-                if ( face.top <= ((face.height / 3) + 80) && (face.top >= -190) ) {
-                    el.classList.add("active");
-                }else{
-                    el.classList.remove("active");
-                }
+            let face = el.getBoundingClientRect();
+            if (face.top <= ((face.height / 3) + 80) && (face.top >= -190)) {
+                el.classList.add("active");
+            } else {
+                el.classList.remove("active");
             }
-        );
+        });
     });
 }
 
@@ -38,13 +38,19 @@ menuBtn.addEventListener('click', e => {
     document.addEventListener('click', clickOutside);
 });
 
+new WOW().init();
+
 function loadData() {
     return new Promise((resolve, reject) => {
-        if (getCookie('preloader') === false) {
-            setCookie('preloader', true, { 'max-age': 7200 });
-            setTimeout(resolve, 2000);
-        }else{
+        if (Cookies.get('preloader') === false || Cookies.get('preloader') === undefined) {
+            Cookies.set('preloader', true, { expires: 1 });
+            setTimeout(function() {
+                resolve();
+                new WOW().init();
+            }, 2000);
+        } else {
             resolve();
+            new WOW().init();
         }
     })
 }
@@ -58,34 +64,8 @@ function clickOutside(event) {
     }
 }
 
-function getCookie(name) {
-    let matches = document.cookie.match(new RegExp(
-        "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
-    ));
-    return matches ? decodeURIComponent(matches[1]) : undefined;
-}
-
-function setCookie(name, value, options = {}) {
-    options = {
-        path: '/',
-        ...options
-    };
-    if (options.expires instanceof Date) {
-        options.expires = options.expires.toUTCString();
-    }
-    let updatedCookie = encodeURIComponent(name) + "=" + encodeURIComponent(value);
-    for (let optionKey in options) {
-        updatedCookie += "; " + optionKey;
-        let optionValue = options[optionKey];
-        if (optionValue !== true) {
-            updatedCookie += "=" + optionValue;
-        }
-    }
-    document.cookie = updatedCookie;
-}
-
 if (fullBody.className == 'page page-home') {
-    
+
     let c = document.getElementById("canvas");
     let ctx = c.getContext("2d");
 
@@ -115,7 +95,7 @@ if (fullBody.className == 'page page-home') {
 
     function conectar(o) {
         ctx.fillStyle = Grd(cx, cy, 1.5 * R);
-        let ultimo = o.length - 1; 
+        let ultimo = o.length - 1;
         let pu0 = puntoDeUnion(o, ultimo, 0);
         ctx.beginPath();
         ctx.moveTo(pu0.x, pu0.y);
