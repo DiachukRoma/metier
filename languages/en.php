@@ -12,7 +12,7 @@
 			'section_1' => 'Marketing agency',
 			'section_2' => 'for space',
 			'section_3' => 'creators',
-			'section_4' => 'Métier helps real estate developers to differentiate and promote their projects by reinforcing residential and commercial concepts. We help architects and interior designers to become recognizable and attract new customers.',
+			'section_4' => 'Agency that work passionately with real estate developers, architects and interior designers. We create concepts for residential and commercial real estate projects. Métier helps architects and designers become recognized and attract new clients.',
 			'btn' 		=> 'Read more',
 		),
 		'scroll'	=> 'SCROLL DOWN',
@@ -75,16 +75,16 @@
 		'visions'	=> array(
 			'vision_1' 	=> array(
 				'title'	=> 'VISIONS',
-				'description' => 'Townspeople spends an average of 85% of their lives at enclosed spaces. Therefore, construction, architecture and design play an undervalued role in our lives. Our goal is to help make these spaces better. This can be achieved by promoting ideological developers and talented architects and designers.',
+				'description' => 'People spend an average of 85% of their lives at enclosed spaces.  We want to make these spaces more comfortable by promoting socially responsible real estate developers, talented local architects and designers.',
 			),
 			'vision_2' 	=> array(
 				'title'	=> 'USAGE CIRCUMSTANCES',
 				'description' => array(
 					'items_1' => array(
 						'title'	=> 'Developers',
-						'item_1' => 'When there is a need for a concept development',	
-						'item_2' => 'When there is a plan for to create a new brand for a developer or construction company',	
-						'item_3' => 'When there is a need for a strategy, branding or launch of an advertising campaign.',	
+						'item_1' => 'When there is a need for a residential or commercial real estate concept development before the construction',	
+						'item_2' => 'To create a new brand for a real estate developer or construction company',	
+						'item_3' => 'When there is a need for a strategy, branding or launch of an advertising campaign',	
 					),
 					'items_2' => array(
 						'title'	=> 'Architects and designers',
@@ -113,7 +113,7 @@
 				'title' => 'DESIGN AND BRANDING',
 				'item_1' => 'Naming',
 				'item_2' => 'Corporate identity',
-				'item_3' => 'Brandbook',
+				'item_3' => 'Brand Book',
 				'item_4' => 'Territories navigations',
 				'item_5' => 'Facade design',
 				'item_6' => 'Specific design decisions',
@@ -135,8 +135,11 @@
 			'section_5' => array(
 				'title' => 'SPECIAL SERVICES',
 				'item_1' => 'Urban design',
-				'item_2' => 'Implementation of concepts in architecture',
-				'item_3' => 'Complex improvement of projects that are already under construction',
+				'item_2' => 'Interior design',
+				'item_3' => 'Navigation maps',
+				'item_4' => 'Implementation of concepts in architecture',
+				'item_5' => 'Real estate concept features creation',
+				'item_6' => 'Selection of appropriate Ukrainian architect and designer',
 			),
 		),
 	);

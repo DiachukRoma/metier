@@ -28,12 +28,12 @@
         </a>
         <div class="menu d-f fd-c jc-sb ai-fs">
             <div class="switcher__lang d-f jc-c">
-                <a href="/?lang=en" class="<?= $data['lang'] == 'en' ? 'current' : 'item'; ?>">ENG</a>
-                <a href="/?lang=ua" class="<?= $data['lang'] == 'ua' ? 'current' : 'item'; ?>">UA</a>
+                <a href="<?= url(); ?>/metier/?lang=en" class="<?= $data['lang'] == 'en' ? 'current' : 'item'; ?>">ENG</a>
+                <a href="<?= url(); ?>/metier/?lang=ua" class="<?= $data['lang'] == 'ua' ? 'current' : 'item'; ?>">UA</a>
             </div>
             <div class="nav d-f fd-c ai-fs">
                 <a class="ankhor" href="#home"><?= $data['menu']['menu_1']; ?></a>
-                <a class="navLink" href="<?= url(); ?>/about.php"><?= $data['menu']['menu_2']; ?></a>
+                <a class="navLink" href="<?= url(); ?>/metier/about.php"><?= $data['menu']['menu_2']; ?></a>
                 <a class="ankhor" href="#project"><?= $data['menu']['menu_3']; ?></a>
                 <a class="ankhor" href="#contact"><?= $data['menu']['menu_4']; ?></a>
             </div>

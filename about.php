@@ -26,15 +26,15 @@
             <span></span>
         </a>
         <div class="menu d-f fd-c jc-sb ai-fs">
-            <div class="languages d-f jc-c">
-                <a href="/?lang=en" class="<?= $data['lang'] == 'en' ? 'current' : 'item'; ?>">ENG</a>
-                <a href="/?lang=ua" class="<?= $data['lang'] == 'ua' ? 'current' : 'item'; ?>">UA</a>
+            <div class="switcher__lang d-f jc-c">
+                <a href="<?= url(); ?>/metier/about.php?lang=en" class="<?= $data['lang'] == 'en' ? 'current' : 'item'; ?>">ENG</a>
+                <a href="<?= url(); ?>/metier/about.php?lang=ua" class="<?= $data['lang'] == 'ua' ? 'current' : 'item'; ?>">UA</a>
             </div>
             <div class="nav d-f fd-c ai-fs">
-                <a href="<?= url(); ?>/#home"><?= $data['menu']['menu_1']; ?></a>
-                <a href="<?= url(); ?>/about.php"><?= $data['menu']['menu_2']; ?></a>
-                <a href="<?= url(); ?>/#project"><?= $data['menu']['menu_3']; ?></a>
-                <a href="<?= url(); ?>/#contact"><?= $data['menu']['menu_4']; ?></a>
+                <a href="<?= url(); ?>/metier/#home"><?= $data['menu']['menu_1']; ?></a>
+                <a href="<?= url(); ?>/metier/about.php"><?= $data['menu']['menu_2']; ?></a>
+                <a href="<?= url(); ?>/metier/#project"><?= $data['menu']['menu_3']; ?></a>
+                <a href="<?= url(); ?>/metier/#contact"><?= $data['menu']['menu_4']; ?></a>
             </div>
             <div class="social d-f jc-sb">
                 <a href="#">FB</a><a href="#">INST</a><a href="#">vimeo</a>
@@ -146,6 +146,9 @@
                             <li class="wow animated d-2"><?= $data['block_we_do']['section_5']['item_1']; ?></li>
                             <li class="wow animated d-3"><?= $data['block_we_do']['section_5']['item_2']; ?></li>
                             <li class="wow animated d-4"><?= $data['block_we_do']['section_5']['item_3']; ?></li>
+                            <li class="wow animated d-5"><?= $data['block_we_do']['section_5']['item_4']; ?></li>
+                            <li class="wow animated d-6"><?= $data['block_we_do']['section_5']['item_5']; ?></li>
+                            <li class="wow animated d-7"><?= $data['block_we_do']['section_5']['item_6']; ?></li>
                         </ul>
                     </div>
                 </div>
